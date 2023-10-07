@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
+    display: flex;
+    border: 7px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    width: 480px;
+    background-color: lightgreen;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#pikachu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pikachu p:not(#felicidad_texto) {
+    font-size: 20px;
+    font-weight: bold;
+}
+#interfaz {
+    padding-left: 10px;
+    line-height: 0.9;
+}
+.contorno {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 200px;
+    height: 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.contorno * {
+    background-color: greenyellow;
+    width: 200px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+#acciones {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+}
+#acciones div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+#entrenar {
+    background-color: red;
+}
+#comer {
+    background-color: chocolate;
+}
+#jugar {
+    background-color: yellow;
+}
+#descansar {
+    background-color: lightseagreen;
+}
+#acciones div:hover {
+    background-color: lime;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+}

@@ -1,0 +1,17 @@
+fieldset {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+}
+fieldset * {
+    height: 20px;
+}
+fieldset input {
+    width: 30px;
+}
+div {
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+#bombilla {
+    width: 300px;
+    height: 350px;
+}
+
+div {
+    display: flex;
+    height: 70px;
+}
+
+p {
+    color: white;
+    background-color: red;
+    width: max-content;
+}
+
+input {
+    width: 30px;
+}

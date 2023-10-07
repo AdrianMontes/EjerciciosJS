@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Saiyan';
+    src: url('Saiyan-Sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url("images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Saiyan';
+    font-size: 30px;
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black; 
+}
+
+.naranja {
+    color: orange;
+}
+
+.rojo {
+    color: red;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#marcador {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#piedrapapeltijera {
+    width: 300px;
+    height: 200px;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.opcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.opcion img {
+    width: 60%;
+    height: 60%;
+}
