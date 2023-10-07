@@ -1,0 +1,75 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+}
+#carcasa {
+    background-color: darkslateblue;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+}
+#operacion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+    color: white;
+    margin: 15px;
+    padding-right: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#teclas {
+    display: grid;
+    justify-items: flex-end;
+    padding-top: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    background-color: black;
+    margin: 15px;
+    padding-right: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#teclas div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#teclas div:hover {
+    background-color: white;
+    color: darkslategray;
+}
+.numero, .operacion {
+    background-color: lightgray;
+    color: darkslategray;
+}
+#delete, #reset {
+    background-color: darkslategray;
+    color: lightgray;
+}
+#reset {
+    grid-row: 5;
+    grid-column: span 2;
+}
+#equals {
+    background-color: red;
+    color: lightgray;
+    grid-row: 5;
+    grid-column: span 2;
+}
