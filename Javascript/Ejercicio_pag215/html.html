@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>215</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <form class="row g-3 needs-validation" novalidate>
+      <div id="informacion_nombres">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <br />
+          <input
+            type="text"
+            class="form-control is-valid"
+            id="validationCustom01"
+            required
+            aria-describedby="error_nombre"
+          />
+          <div id="error_nombre" class="invalid-feedback">Introduce tu nombre</div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <br />
+          <input
+            type="text"
+            class="form-control is-valid"
+            id="validationCustom02"
+            required
+            aria-describedby="error_apellido"
+          />
+          <div id="error_apellido" class="invalid-feedback">Introduce tu apellido</div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"
+            >Nombre de usuario</label
+          >
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input
+              type="text"
+              class="form-control is-invalid"
+              id="validationCustomUsername"
+              aria-describedby="error_usuario"
+              required
+            />
+            <div id="error_usuario" class="invalid-feedback">Introduce un nombre de usuario.</div>
+          </div>
+        </div>
+      </div>
+      <div id="informacion_localizacion">
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Ciudad</label>
+          <br />
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationCustom03"
+            required
+            aria-describedby="error_ciudad"
+          />
+          <div id="error_ciudad" class="invalid-feedback">
+            Introduce una ciudad válida.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Provincia</label>
+          <br />
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationCustom04"
+            aria-describedby="error_provincia"
+            required
+          />
+          <div id="error_provincia" class="invalid-feedback">Introduce una provincia válida.</div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label"
+            >Código postal</label
+          >
+          <br />
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationCustom05"
+            aria-describedby="error_cp"
+            required
+          />
+          <div id="error_cp" class="invalid-feedback">Introduce un código postal válido.</div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input
+            class="form-check-input is-invalid"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            aria-describedby="error_terminos"
+            required
+          />
+          <label class="form-check-label" for="invalidCheck">
+            Acepta los términos y condiciones
+          </label>
+          <div id="error_terminos" class="invalid-feedback">
+            Tienes que aceptar los términos y condiciones antes de enviar.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </div>
+    </form>
+    <script src="js.js"></script>
+  </body>
+</html>
