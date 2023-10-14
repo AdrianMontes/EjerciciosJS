@@ -1,3 +1,4 @@
+/*Principal*/
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 35px;
@@ -5,20 +6,67 @@ body {
 p {
     font-size: 20px;
     margin: 10px;
-    color: white;
 }
 #carcasa {
-    background-color: darkslateblue;
     width: 300px;
     height: 380px;
     padding: 10px;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.theme {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.theme p {
+    font-size: 10px;
+}
+.theme .theme_selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contorno {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 45px;
+    height: 18px;
+    border-radius: 30px;
+    background-color: #252d42;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#contorno #selection {
+    background-color: #c0433a;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.theme .theme_selection .theme_selections {
+    display: flex;
+    height: 25px;
+}
+.theme .theme_selection .theme_selections p {
+    margin-right: 2px;
 }
 #operacion {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 70px;
-    background-color: black;
+    background-color: #181f32;
     color: white;
     margin: 10px;
     padding-right: 10px;
@@ -34,10 +82,16 @@ p {
     justify-items: flex-end;
     padding-top: 10px;
     padding-bottom: 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "tecla7 tecla8 tecla9 delete"
+    "tecla4 tecla5 tecla6 teclaplus"
+    "tecla1 tecla2 tecla3 teclaminus"
+    "tecladot tecla0 teclabar teclax"
+    "reset reset equals equals";
     gap: 5px;
-    background-color: black;
+    background-color: #252d44;
     margin: 10px;
     padding-right: 10px;
     border-radius: 5px;
@@ -51,7 +105,6 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    width: 50px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -62,21 +115,123 @@ p {
     background-color: white;
     color: darkslategray;
 }
-.numero, .operacion {
-    background-color: lightgray;
-    color: darkslategray;
-}
-#delete, #reset {
-    background-color: darkslategray;
-    color: lightgray;
+#delete {
+    width: 50px;
 }
 #reset {
-    grid-row: 5;
+    grid-area: reset;
     grid-column: span 2;
+    width: 120px;
 }
 #equals {
-    background-color: red;
-    color: lightgray;
-    grid-row: 5;
+    grid-area: equals;
     grid-column: span 2;
+    width: 120px;
 }
+/*Tema 1*/
+.carcasa1 {
+    background-color: #3B4664;
+}
+.header1 {
+    color: white;
+}
+.numero1 {
+    width: 50px;
+    background-color: lightgray;
+    color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.borrar1 {
+    background-color: #64719a;
+    color: lightgray;
+}
+.igual1 {
+    background-color: #cd3f30;
+    color: lightgray;
+}
+
+/*Tema 2*/
+.carcasa2 {
+    background-color: lightgray;
+}
+.header2 {
+    color: black;
+}
+.numero2 {
+    width: 50px;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.borrar2 {
+    background-color: darkcyan;
+    color: lightgray;
+}
+.igual2 {
+    background-color: orangered;
+    color: lightgray;
+}
+
+/*Tema 3*/
+.carcasa3 {
+    background-color: darkmagenta;
+}
+.header3 {
+    color: yellow;
+}
+.numero3 {
+    width: 50px;
+    background-color: darkslateblue;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.borrar3 {
+    width: 50px;
+    background-color: darkorchid;
+    color: white;
+}
+.igual3 {
+    background-color: cyan;
+    color: black;
+}
+
+#tecla7 { grid-area: tecla7; }
+#tecla8 { grid-area: tecla8; }
+#tecla9 { grid-area: tecla9; }
+#delete { grid-area: delete; }
+#tecla4 { grid-area: tecla4; }
+#tecla5 { grid-area: tecla5; }
+#tecla6 { grid-area: tecla6; }
+#teclaplus { grid-area: teclaplus; }
+#tecla1 { grid-area: tecla1; }
+#tecla2 { grid-area: tecla2; }
+#tecla3 { grid-area: tecla3; }
+#teclaminus { grid-area: teclaminus; }
+#tecladot { grid-area: tecladot; }
+#tecla0 { grid-area: tecla0; }
+#teclabar { grid-area: teclabar; }
+#teclax { grid-area: teclax; }

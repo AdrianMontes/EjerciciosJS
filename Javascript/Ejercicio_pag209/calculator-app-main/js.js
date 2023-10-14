@@ -1,4 +1,103 @@
 //Funciones
+function actualizar_tema() {
+    tema_actual++;
+
+    if (tema_actual > 3) {
+        tema_actual = 1;
+    }
+
+    if (tema_actual === 1) {
+        carcasa.classList.add("carcasa1");
+        carcasa.classList.remove("carcasa2");
+        carcasa.classList.remove("carcasa3");
+
+        header.classList.add("header1");
+        header.classList.remove("header2");
+        header.classList.remove("header3");
+
+        tema_seleccion_contorno.style.justifyContent = "start";
+        tema_seleccion_contorno.style.backgroundColor = "#252d42";
+        tema_seleccion.style.backgroundColor = "#c0433a";
+
+        operacion_texto.style.backgroundColor = "#181f32"
+        operacion_texto.style.color = "white";
+
+        teclas.style.backgroundColor = "#252d44";
+
+        for (let i = 0; i < clase_teclas.length; i++) {
+            clase_teclas[i].style.backgroundColor = "lightgray";
+            clase_teclas[i].style.color = "darkslategray";
+        }
+
+        for (let i = 0; i < clase_borrar.length; i++) {
+            clase_borrar[i].style.backgroundColor = "#64719a";
+            clase_borrar[i].style.color = "lightgray";
+        }
+
+        tecla_equals.className = "igual1";
+    }
+    else if (tema_actual === 2) {
+        carcasa.classList.remove("carcasa1");
+        carcasa.classList.add("carcasa2");
+        carcasa.classList.remove("carcasa3");
+
+        header.classList.remove("header1");
+        header.classList.add("header2");
+        header.classList.remove("header3");
+
+        tema_seleccion_contorno.style.justifyContent = "center";
+        tema_seleccion_contorno.style.backgroundColor = "gray";
+        tema_seleccion.style.backgroundColor = "orangered";
+
+        operacion_texto.style.backgroundColor = "white";
+        operacion_texto.style.color = "black";
+
+        teclas.style.backgroundColor = "gray";
+
+        for (let i = 0; i < clase_teclas.length; i++) {
+            clase_teclas[i].style.backgroundColor = "lightgray";
+            clase_teclas[i].style.color = "black";
+        }
+
+        for (let i = 0; i < clase_borrar.length; i++) {
+            clase_borrar[i].style.backgroundColor = "darkcyan";
+            clase_borrar[i].style.color = "lightgray";
+        }
+
+        tecla_equals.className = "igual2";
+    }
+    else if (tema_actual === 3) {
+        carcasa.classList.remove("carcasa1");
+        carcasa.classList.remove("carcasa2");
+        carcasa.classList.add("carcasa3");
+
+        header.classList.remove("header1");
+        header.classList.remove("header2");
+        header.classList.add("header3");
+
+        tema_seleccion_contorno.style.justifyContent = "end";
+        tema_seleccion_contorno.style.backgroundColor = "black";
+        tema_seleccion.style.backgroundColor = "cyan";
+
+        operacion_texto.style.backgroundColor = "black"
+        operacion_texto.style.color = "yellow"
+
+        teclas.style.backgroundColor = "black";
+
+        for (let i = 0; i < clase_teclas.length; i++) {
+            clase_teclas[i].style.backgroundColor = "darkslateblue";
+            clase_teclas[i].style.color = "yellow";
+        }
+
+        for (let i = 0; i < clase_borrar.length; i++) {
+            clase_borrar[i].style.backgroundColor = "darkorchid";
+            clase_borrar[i].style.color = "white";
+        }
+
+        tecla_equals.className = "igual3";
+    }
+}
+
 function anadir_numero(numero) {
     if (numero == '+') {
         if (operacion_actual == 0) {
@@ -87,11 +186,19 @@ function borrar() {
 }
 
 //Variables
+//IDs
+var carcasa = document.getElementById("carcasa");
+var header = document.getElementById("header");
+var tema_seleccion_contorno = document.getElementById("contorno");
+var tema_seleccion = document.getElementById("selection");
+var tema_actual = 0;
+
 var operaciones = ["", ""];
 var operacion_actual = 0;
 var operador_actual = '';
 var operacion_texto = document.getElementById("operacion");
 
+var teclas = document.getElementById("teclas");
 var tecla_7 = document.getElementById("tecla7");
 var tecla_8 = document.getElementById("tecla8");
 var tecla_9 = document.getElementById("tecla9");
@@ -111,7 +218,17 @@ var tecla_x = document.getElementById("teclax");
 var tecla_reset = document.getElementById("reset");
 var tecla_equals = document.getElementById("equals");
 
+//Clases
+var clase_teclas = document.getElementsByClassName("numero1");
+var clase_borrar = document.getElementsByClassName("borrar1");
+//clase_teclas[1].style.backgroundColor = "red";
+
+actualizar_tema();
+
 //Eventos
+tema_seleccion_contorno.onclick = function () {
+    actualizar_tema();
+}
 tecla_7.onclick = function () {
     anadir_numero('7');
 }

@@ -49,6 +49,9 @@ body {
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
 }
+#experiencia {
+    background-color: aqua;
+}
 #acciones {
     display: grid;
     grid-template-rows: 1fr 1fr;
