@@ -51,7 +51,7 @@ body {
     width: 70px;
 }
 
-#cuestionario [id^="respuesta"]:hover, #anterior:hover, #siguiente:hover {
+#anterior:hover, #siguiente:hover {
     background-color: lime;
 }
 

@@ -107,38 +107,44 @@ function pasar_pregunta(valor) {
 
 function marcar_respuesta() {
     if (respuestas[pregunta_actual - 1] === 0) {
-        respuesta1.style.backgroundColor = "lightseagreen";
-        respuesta2.style.backgroundColor = "lightseagreen";
-        respuesta3.style.backgroundColor = "lightseagreen";
-        respuesta4.style.backgroundColor = "lightseagreen";
+        respuesta1_color_original = "lightseagreen";
+        respuesta2_color_original = "lightseagreen";
+        respuesta3_color_original = "lightseagreen";
+        respuesta4_color_original = "lightseagreen";
     }
     else if (respuestas[pregunta_actual - 1] === 1) {
-        respuesta1.style.backgroundColor = "lime";
-        respuesta2.style.backgroundColor = "lightseagreen";
-        respuesta3.style.backgroundColor = "lightseagreen";
-        respuesta4.style.backgroundColor = "lightseagreen";
+        respuestas[pregunta_actual - 1] = 1;
+        respuesta1_color_original = "lime";
+        respuesta2_color_original = "lightseagreen";
+        respuesta3_color_original = "lightseagreen";
+        respuesta4_color_original = "lightseagreen";
     }
     else if (respuestas[pregunta_actual - 1] === 2) {
         respuestas[pregunta_actual - 1] = 2;
-        respuesta1.style.backgroundColor = "lightseagreen";
-        respuesta2.style.backgroundColor = "lime";
-        respuesta3.style.backgroundColor = "lightseagreen";
-        respuesta4.style.backgroundColor = "lightseagreen";
+        respuesta1_color_original = "lightseagreen";
+        respuesta2_color_original = "lime";
+        respuesta3_color_original = "lightseagreen";
+        respuesta4_color_original = "lightseagreen";
     }
     else if (respuestas[pregunta_actual - 1] === 3) {
         respuestas[pregunta_actual - 1] = 3;
-        respuesta1.style.backgroundColor = "lightseagreen";
-        respuesta2.style.backgroundColor = "lightseagreen";
-        respuesta3.style.backgroundColor = "lime";
-        respuesta4.style.backgroundColor = "lightseagreen";
+        respuesta1_color_original = "lightseagreen";
+        respuesta2_color_original = "lightseagreen";
+        respuesta3_color_original = "lime";
+        respuesta4_color_original = "lightseagreen";
     }
     else if (respuestas[pregunta_actual - 1] === 4) {
         respuestas[pregunta_actual - 1] = 4;
-        respuesta1.style.backgroundColor = "lightseagreen";
-        respuesta2.style.backgroundColor = "lightseagreen";
-        respuesta3.style.backgroundColor = "lightseagreen";
-        respuesta4.style.backgroundColor = "lime";
+        respuesta1_color_original = "lightseagreen";
+        respuesta2_color_original = "lightseagreen";
+        respuesta3_color_original = "lightseagreen";
+        respuesta4_color_original = "lime";
     }
+
+    respuesta1.style.backgroundColor = respuesta1_color_original;
+    respuesta2.style.backgroundColor = respuesta2_color_original;
+    respuesta3.style.backgroundColor = respuesta3_color_original;
+    respuesta4.style.backgroundColor = respuesta4_color_original;
 }
 
 function resultados() {
@@ -187,6 +193,11 @@ var cantidad_preguntas = 10;
 var preguntas = [];
 var respuestas = [];
 
+var respuesta1_color_original = "lightseagreen";
+var respuesta2_color_original = "lightseagreen";
+var respuesta3_color_original = "lightseagreen";
+var respuesta4_color_original = "lightseagreen";
+
 var cronometro;
 var segundos = 0;
 var minutos = 0;
@@ -202,6 +213,31 @@ cronometro = setInterval(actualizarCronometro, 1000);
 
 
 //Eventos
+respuesta1.addEventListener("mouseover", function () {
+    respuesta1.style.backgroundColor = "lime";
+});
+respuesta1.addEventListener("mouseout", function () {
+    respuesta1.style.backgroundColor = respuesta1_color_original;
+});
+respuesta2.addEventListener("mouseover", function () {
+    respuesta2.style.backgroundColor = "lime";
+});
+respuesta2.addEventListener("mouseout", function () {
+    respuesta2.style.backgroundColor = respuesta2_color_original;
+});
+respuesta3.addEventListener("mouseover", function () {
+    respuesta3.style.backgroundColor = "lime";
+});
+respuesta3.addEventListener("mouseout", function () {
+    respuesta3.style.backgroundColor = respuesta3_color_original;
+});
+respuesta4.addEventListener("mouseover", function () {
+    respuesta4.style.backgroundColor = "lime";
+});
+respuesta4.addEventListener("mouseout", function () {
+    respuesta4.style.backgroundColor = respuesta4_color_original;
+});
+
 respuesta1.onclick = function () {
     respuestas[pregunta_actual - 1] = 1;
     marcar_respuesta();
