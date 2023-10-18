@@ -8,41 +8,90 @@
 </head>
 <body>
     <div id="container">
-        <div id="pikachu">
-            <p>Pikachu</p>
-            <img src="pikachu.png">
-            <br><p id="felicidad_texto">Felicidad: 100 / 200</p>
-            <div class="contorno">
-                <div id="felicidad"></div>
+        <div id="gameplay">
+            <div id="pokemon_actual">
+                <p id="pokemon_actual_texto">Pikachu</p>
+                <img src="pikachu.png" id="pokemon_actual_imagen">
+                <br><p id="felicidad_texto">Felicidad: 100 / 200</p>
+                <div class="contorno">
+                    <div id="felicidad"></div>
+                </div>
+            </div>
+            <div id="interfaz">
+                <p id="nivel_texto">Nivel: 1</p>
+                <p id="experiencia_texto">Experiencia: 0 / 5</p>
+                <div class="contorno">
+                    <div id="experiencia"></div>
+                </div>
+                <br>
+                <p id="energia_texto">Energia: 200 / 200</p>
+                <div class="contorno">
+                    <div id="energia"></div>
+                </div>
+                <br>
+                <p id="hambre_texto">Hambre: 150 / 200</p>
+                <div class="contorno">
+                    <div id="hambre"></div>
+                </div>
+                <br>
+                <p id="diversion_texto">Diversión: 100 / 200</p>
+                <div class="contorno">
+                    <div id="diversion"></div>
+                </div>
+                <br>
+                <div id="acciones">
+                    <div id="entrenar">Entrenar</div>
+                    <div id="comer">Comer</div>
+                    <div id="jugar">Jugar</div>
+                    <div id="descansar">Descansar</div>
+                </div>
             </div>
         </div>
-        <div id="interfaz">
-            <p id="nivel_texto">Nivel: 1</p>
-            <p id="experiencia_texto">Experiencia: 0 / 5</p>
+
+        <div id="explicacion">
+            <h3>Explicación del juego</h3>
+            <p>Tienes que entrenar a tu Pokémon subiendo niveles. A medida que vas subiendo niveles, tu límite de energía aumentará.</p>
+            <p>Para ello, usa la acción de "Entrenar". Esta acción te consumirá energía, hambre y diversión. A cambio, ganarás experiencia.</p>
+            <p>Para subir el hambre, tiene que usar la acción "Comer".</p>
+            <p>La acción "Jugar" aumentará la diversión, pero disminuirá el hambre.</p>
+            <p>Si necesitas más energía, usa la acción "Descansar". Esto, sin embargo, bajará el hambre y la diversión.</p>
+            <p>Cuanta más felicidad tenga tu Pokémon, más rápido será subir de nivel</p>
+            <p>Si uno de los estados de tu Pokémon está por el 25% o menos, la felicidad disminuirá por cada acción. Asegúrate de que a tu Pokémon no le falte energía, hambre ni diversión.</p>
+        </div>
+
+        <div id="objetivos">
+            <h3>Objetivos</h3>
+            <p id="objetivo_felicidad_texto">Alcanza la felicidad máxima (0 / 100)</p>
             <div class="contorno">
-                <div id="experiencia"></div>
+                <div id="objetivo_felicidad"></div>
             </div>
-            <br>
-            <p id="energia_texto">Energia: 200 / 200</p>
+            <p id="objetivo_nivel_texto">Alcanza el nivel 7 (1 / 7)</p>
             <div class="contorno">
-                <div id="energia"></div>
+                <div id="objetivo_nivel"></div>
             </div>
-            <br>
-            <p id="hambre_texto">Hambre: 150 / 200</p>
+            <p id="objetivo_comer_texto">Usa la acción Comer 20 veces (0 / 20)</p>
             <div class="contorno">
-                <div id="hambre"></div>
+                <div id="objetivo_comer"></div>
             </div>
-            <br>
-            <p id="diversion_texto">Diversión: 100 / 200</p>
+            <p id="objetivo_jugar_texto">Usa la acción Jugar 15 veces (0 / 15)</p>
             <div class="contorno">
-                <div id="diversion"></div>
+                <div id="objetivo_jugar"></div>
             </div>
-            <br>
-            <div id="acciones">
-                <div id="entrenar">Entrenar</div>
-                <div id="comer">Comer</div>
-                <div id="jugar">Jugar</div>
-                <div id="descansar">Descansar</div>
+            <p id="objetivo_descansar_texto">Usa la acción Descansar 15 veces (0 / 15)</p>
+            <div class="contorno">
+                <div id="objetivo_descansar"></div>
+            </div>
+        </div>
+
+        <div id="desbloqueables">
+            <h3>Desbloqueables</h3>
+            <div id="pokemon">
+                <img src="pikachu.png" id="pikachu">
+                <img src="butterfree.png" id="butterfree">
+                <img src="charizard.png" id="charizard">
+                <img src="bulbasaur.png" id="bulbasaur">
+                <img src="squirtle.png" id="squirtle">
+                <img src="pidgeot.png" id="pidgeot">
             </div>
         </div>
     </div>

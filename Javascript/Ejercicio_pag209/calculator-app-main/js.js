@@ -1,188 +1,179 @@
 //Funciones
 function actualizar_tema() {
-    tema_actual++;
+  tema_actual++;
 
-    if (tema_actual > 3) {
-        tema_actual = 1;
+  if (tema_actual > 3) {
+    tema_actual = 1;
+  }
+
+  if (tema_actual === 1) {
+    carcasa.classList.add("carcasa1");
+    carcasa.classList.remove("carcasa2");
+    carcasa.classList.remove("carcasa3");
+
+    header.classList.add("header1");
+    header.classList.remove("header2");
+    header.classList.remove("header3");
+
+    tema_seleccion_contorno.style.justifyContent = "start";
+    tema_seleccion_contorno.style.backgroundColor = "#252d42";
+    tema_seleccion.style.backgroundColor = "#c0433a";
+
+    operacion_texto.style.backgroundColor = "#181f32";
+    operacion_texto.style.color = "white";
+
+    teclas.style.backgroundColor = "#252d44";
+
+    for (let i = 0; i < clase_teclas.length; i++) {
+      clase_teclas[i].style.backgroundColor = "lightgray";
+      clase_teclas[i].style.color = "darkslategray";
     }
 
-    if (tema_actual === 1) {
-        carcasa.classList.add("carcasa1");
-        carcasa.classList.remove("carcasa2");
-        carcasa.classList.remove("carcasa3");
-
-        header.classList.add("header1");
-        header.classList.remove("header2");
-        header.classList.remove("header3");
-
-        tema_seleccion_contorno.style.justifyContent = "start";
-        tema_seleccion_contorno.style.backgroundColor = "#252d42";
-        tema_seleccion.style.backgroundColor = "#c0433a";
-
-        operacion_texto.style.backgroundColor = "#181f32"
-        operacion_texto.style.color = "white";
-
-        teclas.style.backgroundColor = "#252d44";
-
-        for (let i = 0; i < clase_teclas.length; i++) {
-            clase_teclas[i].style.backgroundColor = "lightgray";
-            clase_teclas[i].style.color = "darkslategray";
-        }
-
-        for (let i = 0; i < clase_borrar.length; i++) {
-            clase_borrar[i].style.backgroundColor = "#64719a";
-            clase_borrar[i].style.color = "lightgray";
-        }
-
-        tecla_equals.className = "igual1";
+    for (let i = 0; i < clase_borrar.length; i++) {
+      clase_borrar[i].style.backgroundColor = "#64719a";
+      clase_borrar[i].style.color = "lightgray";
     }
-    else if (tema_actual === 2) {
-        carcasa.classList.remove("carcasa1");
-        carcasa.classList.add("carcasa2");
-        carcasa.classList.remove("carcasa3");
 
-        header.classList.remove("header1");
-        header.classList.add("header2");
-        header.classList.remove("header3");
+    tecla_equals.className = "igual1";
+  } else if (tema_actual === 2) {
+    carcasa.classList.remove("carcasa1");
+    carcasa.classList.add("carcasa2");
+    carcasa.classList.remove("carcasa3");
 
-        tema_seleccion_contorno.style.justifyContent = "center";
-        tema_seleccion_contorno.style.backgroundColor = "gray";
-        tema_seleccion.style.backgroundColor = "orangered";
+    header.classList.remove("header1");
+    header.classList.add("header2");
+    header.classList.remove("header3");
 
-        operacion_texto.style.backgroundColor = "white";
-        operacion_texto.style.color = "black";
+    tema_seleccion_contorno.style.justifyContent = "center";
+    tema_seleccion_contorno.style.backgroundColor = "gray";
+    tema_seleccion.style.backgroundColor = "orangered";
 
-        teclas.style.backgroundColor = "gray";
+    operacion_texto.style.backgroundColor = "white";
+    operacion_texto.style.color = "black";
 
-        for (let i = 0; i < clase_teclas.length; i++) {
-            clase_teclas[i].style.backgroundColor = "lightgray";
-            clase_teclas[i].style.color = "black";
-        }
+    teclas.style.backgroundColor = "gray";
 
-        for (let i = 0; i < clase_borrar.length; i++) {
-            clase_borrar[i].style.backgroundColor = "darkcyan";
-            clase_borrar[i].style.color = "lightgray";
-        }
-
-        tecla_equals.className = "igual2";
+    for (let i = 0; i < clase_teclas.length; i++) {
+      clase_teclas[i].style.backgroundColor = "lightgray";
+      clase_teclas[i].style.color = "black";
     }
-    else if (tema_actual === 3) {
-        carcasa.classList.remove("carcasa1");
-        carcasa.classList.remove("carcasa2");
-        carcasa.classList.add("carcasa3");
 
-        header.classList.remove("header1");
-        header.classList.remove("header2");
-        header.classList.add("header3");
-
-        tema_seleccion_contorno.style.justifyContent = "end";
-        tema_seleccion_contorno.style.backgroundColor = "black";
-        tema_seleccion.style.backgroundColor = "cyan";
-
-        operacion_texto.style.backgroundColor = "black"
-        operacion_texto.style.color = "yellow"
-
-        teclas.style.backgroundColor = "black";
-
-        for (let i = 0; i < clase_teclas.length; i++) {
-            clase_teclas[i].style.backgroundColor = "darkslateblue";
-            clase_teclas[i].style.color = "yellow";
-        }
-
-        for (let i = 0; i < clase_borrar.length; i++) {
-            clase_borrar[i].style.backgroundColor = "darkorchid";
-            clase_borrar[i].style.color = "white";
-        }
-
-        tecla_equals.className = "igual3";
+    for (let i = 0; i < clase_borrar.length; i++) {
+      clase_borrar[i].style.backgroundColor = "darkcyan";
+      clase_borrar[i].style.color = "lightgray";
     }
+
+    tecla_equals.className = "igual2";
+  } else if (tema_actual === 3) {
+    carcasa.classList.remove("carcasa1");
+    carcasa.classList.remove("carcasa2");
+    carcasa.classList.add("carcasa3");
+
+    header.classList.remove("header1");
+    header.classList.remove("header2");
+    header.classList.add("header3");
+
+    tema_seleccion_contorno.style.justifyContent = "end";
+    tema_seleccion_contorno.style.backgroundColor = "black";
+    tema_seleccion.style.backgroundColor = "cyan";
+
+    operacion_texto.style.backgroundColor = "black";
+    operacion_texto.style.color = "yellow";
+
+    teclas.style.backgroundColor = "black";
+
+    for (let i = 0; i < clase_teclas.length; i++) {
+      clase_teclas[i].style.backgroundColor = "darkslateblue";
+      clase_teclas[i].style.color = "yellow";
+    }
+
+    for (let i = 0; i < clase_borrar.length; i++) {
+      clase_borrar[i].style.backgroundColor = "darkorchid";
+      clase_borrar[i].style.color = "white";
+    }
+
+    tecla_equals.className = "igual3";
+  }
 }
 
 function anadir_numero(numero) {
-    if (numero == '+') {
-        if (operacion_actual == 0) {
-            operacion_actual = 1;
-            operador_actual = '+';
-        }
-        else if (operacion_actual == 1) {
-            igualar_operacion();
-            operador_actual = '+';
-            operacion_texto.textContent = operaciones[0];
-        }
-    }
-    else if (numero == '-') {
-        if (operacion_actual == 0) {
-            operacion_actual = 1;
-            operador_actual = '-';
-        }
-        else if (operacion_actual == 1) {
-            igualar_operacion();
-            operador_actual = '-';
-            operacion_texto.textContent = operaciones[0];
-        }
-    }
-    else if (numero == '*') {
-        if (operacion_actual == 0) {
-            operacion_actual = 1;
-            operador_actual = '*';
-        }
-        else if (operacion_actual == 1) {
-            igualar_operacion();
-            operador_actual = '*';
-            operacion_texto.textContent = operaciones[0];
-        }
-    }
-    else if (numero == '/') {
-        if (operacion_actual == 0) {
-            operacion_actual = 1;
-            operador_actual = '/';
-        }
-        else if (operacion_actual == 1) {
-            igualar_operacion();
-            operador_actual = '/';
-            operacion_texto.textContent = operaciones[0];
-        }
-    }
-    else {
-        operaciones[operacion_actual] += numero;
-    }
+  quitar_texto_innecesario();
 
-    operacion_texto.textContent += numero;
+  if (numero == "+" || numero == "-" || numero == "*" || numero == "/") {
+    operaciones[1] = numero;
+  } else {
+    if (operaciones[1] == "") {
+      if (numero == ".") {
+        if (operaciones[0].indexOf(".") == -1) {
+          operaciones[0] += numero;
+        }
+      } else {
+        operaciones[0] += numero;
+      }
+    } else {
+      if (numero == ".") {
+        if (operaciones[2].indexOf(".") == -1) {
+          operaciones[2] += numero;
+        }
+      } else {
+        operaciones[2] += numero;
+      }
+    }
+  }
+
+  operacion_texto.textContent =
+    operaciones[0] + operaciones[1] + operaciones[2];
 }
 
 function igualar_operacion() {
-    let resultado = 0;
-    if (operador_actual == '+') {
-        resultado = parseFloat(operaciones[0]) + parseFloat(operaciones[1]);
-        operaciones[0] = resultado.toString();
-        operaciones[1] = "";
-    }
-    else if (operador_actual == '-') {
-        resultado = parseFloat(operaciones[0]) - parseFloat(operaciones[1]);
-        operaciones[0] = resultado.toString();
-        operaciones[1] = "";
-    }
-    else if (operador_actual == '*') {
-        resultado = parseFloat(operaciones[0]) * parseFloat(operaciones[1]);
-        operaciones[0] = resultado.toString();
-        operaciones[1] = "";
-    }
-    else if (operador_actual == '/') {
-        resultado = parseFloat(operaciones[0]) / parseFloat(operaciones[1]);
-        operaciones[0] = resultado.toString();
-        operaciones[1] = "";
-    }
-    operacion_actual = 0;
+  let resultado = 0;
+  if (operaciones[1] == "+") {
+    resultado = parseFloat(operaciones[0]) + parseFloat(operaciones[2]);
+    operaciones[0] = resultado.toString();
+    operaciones[1] = "";
+    operaciones[2] = "";
+  } else if (operaciones[1] == "-") {
+    resultado = parseFloat(operaciones[0]) - parseFloat(operaciones[2]);
+    operaciones[0] = resultado.toString();
+    operaciones[1] = "";
+    operaciones[2] = "";
+  } else if (operaciones[1] == "*") {
+    resultado = parseFloat(operaciones[0]) * parseFloat(operaciones[2]);
+    operaciones[0] = resultado.toString();
+    operaciones[1] = "";
+    operaciones[2] = "";
+  } else if (operaciones[1] == "/") {
+    resultado = parseFloat(operaciones[0]) / parseFloat(operaciones[2]);
+    operaciones[0] = resultado.toString();
+    operaciones[1] = "";
+    operaciones[2] = "";
+  }
+
+  operacion_texto.textContent =
+    operaciones[0] + operaciones[1] + operaciones[2];
 }
 
 function borrar() {
-    if (operaciones[1] == "") {
-        operador_actual = '';
-        operacion_actual = 0;
-    }
+  quitar_texto_innecesario();
 
-    var nuevo_texto = operacion_texto.textContent;
-    operacion_texto.textContent = nuevo_texto.substring(0, nuevo_texto.length - 1);
+  if (operaciones[1] == "") {
+    let borrado = operaciones[0];
+    operaciones[0] = borrado.slice(0, -1);
+  } else if (operaciones[1] != "" && operaciones[2] == "") {
+    operaciones[1] = "";
+  } else {
+    let borrado = operaciones[2];
+    operaciones[2] = borrado.slice(0, -1);
+  }
+
+  operacion_texto.textContent =
+    operaciones[0] + operaciones[1] + operaciones[2];
+}
+
+function quitar_texto_innecesario() {
+  if (operaciones[0] == "Infinity" || operaciones[0] == "NaN") {
+    operaciones[0] = "";
+  }
 }
 
 //Variables
@@ -193,9 +184,7 @@ var tema_seleccion_contorno = document.getElementById("contorno");
 var tema_seleccion = document.getElementById("selection");
 var tema_actual = 0;
 
-var operaciones = ["", ""];
-var operacion_actual = 0;
-var operador_actual = '';
+var operaciones = ["", "", ""];
 var operacion_texto = document.getElementById("operacion");
 
 var teclas = document.getElementById("teclas");
@@ -227,63 +216,61 @@ actualizar_tema();
 
 //Eventos
 tema_seleccion_contorno.onclick = function () {
-    actualizar_tema();
-}
+  actualizar_tema();
+};
 tecla_7.onclick = function () {
-    anadir_numero('7');
-}
+  anadir_numero("7");
+};
 tecla_8.onclick = function () {
-    anadir_numero('8');
-}
+  anadir_numero("8");
+};
 tecla_9.onclick = function () {
-    anadir_numero('9');
-}
+  anadir_numero("9");
+};
 tecla_delete.onclick = function () {
-    borrar();
-}
+  borrar();
+};
 tecla_4.onclick = function () {
-    anadir_numero('4');
-}
+  anadir_numero("4");
+};
 tecla_5.onclick = function () {
-    anadir_numero('5');
-}
+  anadir_numero("5");
+};
 tecla_6.onclick = function () {
-    anadir_numero('6');
-}
+  anadir_numero("6");
+};
 tecla_plus.onclick = function () {
-    anadir_numero('+');
-}
+  anadir_numero("+");
+};
 tecla_1.onclick = function () {
-    anadir_numero('1');
-}
+  anadir_numero("1");
+};
 tecla_2.onclick = function () {
-    anadir_numero('2');
-}
+  anadir_numero("2");
+};
 tecla_3.onclick = function () {
-    anadir_numero('3');
-}
+  anadir_numero("3");
+};
 tecla_minus.onclick = function () {
-    anadir_numero('-');
-}
+  anadir_numero("-");
+};
 tecla_dot.onclick = function () {
-    anadir_numero('.');
-}
+  anadir_numero(".");
+};
 tecla_0.onclick = function () {
-    anadir_numero('0');
-}
+  anadir_numero("0");
+};
 tecla_bar.onclick = function () {
-    anadir_numero('/');
-}
+  anadir_numero("/");
+};
 tecla_x.onclick = function () {
-    anadir_numero('*');
-}
+  anadir_numero("*");
+};
 tecla_reset.onclick = function () {
-    operacion_texto.textContent = "";
-    operaciones = ["", ""];
-    operacion_actual = 0;
-    operador_actual = '';
-}
+  operacion_texto.textContent = "";
+  operaciones = ["", "", ""];
+};
 tecla_equals.onclick = function () {
-    igualar_operacion();
-    operacion_texto.textContent = operaciones[0];
-}
+  igualar_operacion();
+  operacion_texto.textContent = operaciones[0];
+};

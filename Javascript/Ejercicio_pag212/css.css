@@ -70,6 +70,6 @@ body {
     visibility: hidden;
 }
 
-#respuestas_correctas_texto {
+.texto_negro {
     color: black;
 }
